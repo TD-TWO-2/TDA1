@@ -1,0 +1,45 @@
+.registerbg {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+  }
+
+  .registercontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-top: 100px;
+  }
+
+  .registerform{
+    background-color: rgba(0, 0, 0, 36%);
+    padding: 20px;
+    border-radius: 16px;
+    width: 35%;
+  }
+
+/* .registerform input{
+    border-radius: 32px;
+    border:none;
+    outline: none;
+    font-size: 16px;
+}
+.registerform label {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #DFDFDF;
+} */
+.registerform a {
+    color: #DFDFDF;
+}
+.registerform button{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #DFDFDF;
+    background-color: var(--buttonColor);
+    width: 100%;
+    border:none;
+    outline: none;
+    border-radius: 4px;
+}

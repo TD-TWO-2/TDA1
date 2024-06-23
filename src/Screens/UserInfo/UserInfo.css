@@ -1,0 +1,47 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.userInfobg {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.userInfocontainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.userInfoform{
+  background-color: rgba(0, 0, 0, 50%);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+/* .userInfoform input{
+  border-radius: 32px;
+  border:none;
+  outline: none;
+  font-size: 16px;
+}
+.userInfoform label {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #DFDFDF;
+} */
+.userInfoform a {
+  color: #DFDFDF;
+}
+.userInfoform button{
+  margin-top: 20px;
+  font-size: 16px;
+  color: #DFDFDF;
+  background-color: var(--buttonColor);
+  width: 100%;
+  border:none;
+  outline: none;
+  border-radius: 32px;
+}

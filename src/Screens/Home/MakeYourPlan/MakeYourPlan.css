@@ -1,0 +1,16 @@
+.icon-style {
+    background-color: #c53f3f;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    padding: 10px;
+  }
+  
+  @media (max-width: 575.98px) {
+    .icon-style {
+      width: 45px;
+      height: 45px;
+      padding: 8px;
+    }
+  }
+  

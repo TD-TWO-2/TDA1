@@ -1,0 +1,14 @@
+.TextArea {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #DFDFDF;
+  color: black;
+}
+
+.TextAreaLabel {
+  margin-top: 10px;
+  font-size: 12px;
+  color: "black";
+}
