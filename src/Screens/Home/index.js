@@ -473,30 +473,32 @@ const Home = () => {
           <ImageGallery />
         </div>
 
-
         <div className="container">
-      <div className="row  pb-5">
-      <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-3">
-          <img
-            src={require('../../Images/Team.png')}
-            alt="Marriage Amico"
-            className="img-fluid"
-          />
-        </div>
+          <div className="row  pb-5">
+            <div className="col-12 col-lg-6 d-flex justify-content-center align-items-center mt-3">
+              <img
+                src={require("../../Images/Team.png")}
+                alt="Marriage Amico"
+                className="img-fluid"
+              />
+            </div>
 
-        <div className="col-12 col-lg-6 pt-5 d-flex flex-column justify-content-center">
-        <h2 className="poppins-semibold mb-2">Do You have any Plan?<br/>Let's talk with us.</h2>
-          <div>
-           <TextInput label='Name' placeHolder='Name'/>
-           <TextInput label='Email' placeHolder='Email'/>
-           <TextInput label='Phone Number' placeHolder='Phone Number'/>
-           <TextArea label='Message' placeHolder='Message'/>
-           <button className="btn2 mt-3">Submit</button>
+            <div className="col-12 col-lg-6 pt-5 d-flex flex-column justify-content-center">
+              <h2 className="poppins-semibold mb-2">
+                Do You have any Plan?
+                <br />
+                Let's talk with us.
+              </h2>
+              <div>
+                <TextInput label="Name" placeHolder="Name" />
+                <TextInput label="Email" placeHolder="Email" />
+                <TextInput label="Phone Number" placeHolder="Phone Number" />
+                <TextArea label="Message" placeHolder="Message" />
+                <button className="btn2 mt-3">Submit</button>
+              </div>
+            </div>
           </div>
         </div>
-        
-      </div>
-    </div>
       </main>
       <Footer />
     </>
