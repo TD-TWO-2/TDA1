@@ -7,51 +7,8 @@ import Img3 from "../../Images/gallery3.png";
 import Img4 from "../../Images/gallery4.png";
 import Img5 from "../../Images/gallery5.png";
 import Img6 from "../../Images/gallery6.png";
-const ImageGallery = () => {
-    let images  = [
-        {
-          id: 0,
-          src: Img,
-        },
-        {
-          id: 1,
-          src: Img1,
-        },
-        {
-          id: 2,
-          src: Img2,
-          tall: true
-        },
-        {
-          id: 3,
-          src: Img3,
-        },
-        {
-          id: 4,
-          src: Img4,
-        },
-        {
-          id: 5,
-          src: Img5,
-          tall: true
-        },
-        {
-          id: 6,
-          src: Img6,
-        },
-        {
-          id: 7,
-          src: Img1,
-        },
-        {
-          id: 8,
-          src: Img3,
-        },
-        {
-          id: 9,
-          src: Img5,
-        },
-      ];
+const ImageGallery = ({images}) => {
+   
     
   return (
     <div className="gallery">

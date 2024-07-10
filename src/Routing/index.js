@@ -6,6 +6,8 @@ import Login from "../Screens/Login";
 import UserInfo from "../Screens/UserInfo";
 import Search from "../Screens/Search";
 import Events from "../Screens/Events";
+import Contact from "../Screens/Contact";
+import Aboutus from "../Screens/Aboutus";
 
 const Routing = () => {
   return (
@@ -17,6 +19,8 @@ const Routing = () => {
         <Route path="/UserInfo" element={<UserInfo />} />
         <Route path="/Search" element={<Search />} />
         <Route path="/Events" element={<Events />} />
+        <Route path="/Contact" element={<Contact />} />
+        <Route path="/Aboutus" element={<Aboutus />} />
       </Routes>
     </BrowserRouter>
   );

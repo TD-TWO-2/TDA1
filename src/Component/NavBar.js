@@ -1,5 +1,6 @@
 import React from 'react'
-import logo from '../Images/azwaajlogo.png';
+// import logo from '../Images/azwaajlogo.png';
+import logo from '../Images/azwgold.png';
 import { Outlet, Link, useNavigate } from "react-router-dom";
 
 const NavBar = () => {
@@ -36,13 +37,13 @@ const NavBar = () => {
             <li><Link to="/">Home</Link></li>
             <li><Link to="/Search">Search</Link></li>
             <li><Link to="/Events">Event</Link></li>
-            <li><Link to="/">Contact us</Link></li>
-            <li><Link to="/">About Us</Link></li>
+            <li><Link to="/Contact">Contact us</Link></li>
+            <li><Link to="/Aboutus">About Us</Link></li>
           </ul>
         </nav>
           <Outlet />
         <div className="">
-        <button onClick={()=>handelRegisterPress()} >Register</button>
+        {/* <button onClick={()=>handelRegisterPress()} >Register</button> */}
         </div>
 
 

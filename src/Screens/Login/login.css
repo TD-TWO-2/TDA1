@@ -16,9 +16,11 @@
 
 .loginform{
   background-color: rgba(0, 0, 0, 36%);
+  /* background: gainsboro; */
+  /* background: var(--buttonColor); */
   padding: 20px;
   border-radius: 16px;
-  width: 35%;
+  width: 65%;
 }
 
 /* .loginform input{

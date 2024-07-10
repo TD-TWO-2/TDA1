@@ -17,6 +17,13 @@ import ImageGallery from "../../Component/ImageGallery";
 import MakeYourPlan from "./MakeYourPlan";
 import TextInput from "../../Component/TextInput";
 import TextArea from "../../Component/TextArea";
+import Img from "../../Images/event.jpg";
+import Img1 from "../../Images/gallery1.png";
+import Img2 from "../../Images/gallery2.png";
+import Img3 from "../../Images/gallery3.png";
+import Img4 from "../../Images/gallery4.png";
+import Img5 from "../../Images/gallery5.png";
+import Img6 from "../../Images/gallery6.png";
 const Home = () => {
   // const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -231,6 +238,51 @@ const Home = () => {
       height: 212,
     },
   ];
+
+  let imagesss  = [
+    {
+      id: 0,
+      src: Img,
+    },
+    {
+      id: 1,
+      src: Img1,
+    },
+    {
+      id: 2,
+      src: Img2,
+      tall: true
+    },
+    {
+      id: 3,
+      src: Img3,
+    },
+    {
+      id: 4,
+      src: Img4,
+    },
+    {
+      id: 5,
+      src: Img5,
+      tall: true
+    },
+    {
+      id: 6,
+      src: Img6,
+    },
+    {
+      id: 7,
+      src: Img1,
+    },
+    {
+      id: 8,
+      src: Img3,
+    },
+    {
+      id: 9,
+      src: Img5,
+    },
+  ];
   return (
     <>
       <NavBar />
@@ -344,7 +396,7 @@ const Home = () => {
           <div className="p-5" />
         </div>
 
-        <div className="">
+        {/* <div className="">
           <h2 className="poppins-semibold text-center mb-4">
             Send Gift To Love One
           </h2>
@@ -391,7 +443,7 @@ const Home = () => {
             View All
           </p>
           <div className="p-5" />
-        </div>
+        </div> */}
 
         <div className="container">
           <div className="row">
@@ -409,15 +461,15 @@ const Home = () => {
                   <div className="countup-container d-flex flex-column align-items-center">
                     <CountUp start={0} end={400} />
                     <p className="mb-1" style={{ fontSize: 14 }}>
-                      Parties
+                    Cultural & Religious Events
                     </p>
                   </div>
                 </div>
                 <div className="col-6 mb-4">
                   <div className="countup-container d-flex flex-column align-items-center">
-                    <CountUp start={0} end={1001} />
+                    <CountUp start={0} end={5001} />
                     <p className="mb-1" style={{ fontSize: 14 }}>
-                      Concerts
+                    Personal Celebrations
                     </p>
                   </div>
                 </div>
@@ -470,7 +522,7 @@ const Home = () => {
           <h2 className="poppins-semibold text-center mb-5">
             Our Recent Activities
           </h2>
-          <ImageGallery />
+          <ImageGallery images={imagesss} />
         </div>
 
         <div className="container">
