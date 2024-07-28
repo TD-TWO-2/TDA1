@@ -3,37 +3,24 @@ import TextInput from "../../Component/TextInput";
 import TextArea from "../../Component/TextArea";
 import Button from "../../Component/Button";
 import NavBar from "../../Component/NavBar";
-import GoogleMapReact from 'google-map-react';
 const Contact = () => {
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  };
-
   return (
     <div className="container-fluied">
     <NavBar/>
       <div className="row">
-        <div className="col-3">
-          <img
-            src="https://picsum.photos/700/600"
-            style={{ height: "100vh", width: "100%" }}
-          />
-        </div>
-        <div className="col-9">
+        <div className="col-8">
           <div
             className="d-flex justify-content-center align-items-center flex-column"
-            style={{ height: "100vh" ,width:'100%'}}
+            // style={{ height: "100vh" ,width:'100%'}}
           >
             {/* <img src={require("../../Images/azwgold.png")} /> */}
-            <div className="m-5" />
-            {/* <h3 className="poppins-medium">Drop Us a Line</h3> */}
-            <h4 className="poppins-medium">Contact us</h4>
+            <div className="m-5 p-3" />
             <div className="m-1" />
             <div style={{width:'60%'}}>
+            <div style={{display:'flex',alignSelf:'start',flexDirection:"column"}}>
+            <h4 className="poppins-medium text-left" style={{textAlign:"left"}}>Get in Touch</h4>
+            <p className="poppins-regular text-left" style={{textAlign:"left",fontSize:12}}>Enim tempor eget pharetra facilisis sed maecenas adipiscing. Eu leo molestie vel, ornare non id blandit netus.</p>
+            </div>
             <TextInput
               placeHolder="Enter Name"
               label="Enter Name"
@@ -66,15 +53,13 @@ const Contact = () => {
             </div>
           </div>
         </div>
+        <div className="col-4">
+          <div className="d-flex align-items-center" style={{height:'100%', position:'relative',right:100, top:40}}>
+          <img src={require('../../Images/Facetoface.png')} style={{width:350,height:350}}/>
+          </div>
+        </div>
       </div>
-      <div style={{ height: '100vh', width: '100%' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-      </GoogleMapReact>
-    </div>
+
     </div>
   );
 };
