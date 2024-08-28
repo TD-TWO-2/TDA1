@@ -18,6 +18,26 @@
     border-radius: 16px;
     width: 35%;
   }
+  .fontColor{
+    color: var(--primary);
+  }
+
+  .btn-register{
+    width: 50%;
+    /* width: 500px; */
+    height: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border:none;
+    background: var(--primary);
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 100px;
+  }
+
 
 /* .registerform input{
     border-radius: 32px;
@@ -43,3 +63,28 @@
     outline: none;
     border-radius: 4px;
 }
+
+
+.AgreementContainer {
+  margin-top: 10px;
+}
+
+.AgreementCheckbox {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.AgreementText {
+  font-size: 14px;
+  color: #54595F;
+}
+
+.AgreementText a {
+  color: var(--primary); /* Bootstrap primary color for links */
+  text-decoration: none;
+}
+
+.AgreementText a:hover {
+  text-decoration: underline;
+}
+

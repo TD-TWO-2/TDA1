@@ -1,66 +1,267 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Search.css";
-import backimage from "../../Images/searchbg.png";
-import { Link } from "react-router-dom";
-import NavBar from "../../Component/NavBar";
+import TextInput2 from "../../Component/TextInput/TextInput2";
+import SelectInput from "../../Component/SelectInput";
 import Footer from "../../Component/Footer";
-import TextInput from "../../Component/TextInput";
+import NavBar from "../../Component/NavBar";
 const Search = () => {
-  return (
-    <div
-    // className="loginbg" style={{ backgroundImage: `url(${backimage})` }}
-    className="" style={{ backgroundColor:'#ebf0f4' }}
-    >
-      <NavBar />
-      <div className="py-3"></div>
-      <div className="logincontainer">
-        <div className="loginform">
-          <h3 className=" text-center pt-2">I'm looking for</h3>
-          <div className="row">
-            <div className="col-4">
-              <TextInput placeHolder="Gender" label="Gender"  />
-            </div>
-            <div className="col-4">
-              <TextInput
-                placeHolder="Physical Features"
-                label="Physical Features"
-              />
-            </div>
-            <div className="col-4">
-              <TextInput placeHolder="Age(From)" label="Age(From)"  />
-            </div>
-          </div>
-          <div className="row">
-           
-            <div className="col-4">
-              <TextInput placeHolder="Age(To)" label="Age(To)"   />
-            </div>
-            <div className="col-4">
-              <TextInput placeHolder="Profession" label="Profession"  />
-            </div>
-            <div className="col-4">
-              <TextInput placeHolder="Cast" label="Cast"   />
-            </div>
-          </div>
-        
-          <div className="row">
-            <div className="col-4">
-              <TextInput placeHolder="Martial Status" label="Martial Status"   />
-            </div>
-            <div className="col-4">
-              <TextInput
-                placeHolder="Religious / Sect"
-                label="Religious / Sect"
-                 
-              />
-            </div>
-          </div>
+  const [selectedValue, setSelectedValue] = useState("");
+  const handleSelectChange = (name, value) => {
+    setSelectedValue(value);
+    console.log(name, value);
+  };
 
-          <button className="form-control">Continue</button>
+  const options = [
+    { value: "option1", label: "Male" },
+    { value: "option2", label: "Female" },
+    { value: "option3", label: "Other" },
+  ];
+  return (
+    <div>
+      <NavBar/>
+      <div class="background-container">
+        <div className="text-overlay">
+          <h1 className="poppins-medium">Find Your</h1>
+          <p className="pacifico-regular patnerfontSize">Life Partner</p>
         </div>
       </div>
-      <div className="py-3"></div>
-      <Footer />
+      <div className="m-3" />
+      <div
+        className="d-flex justify-content-center align-items-center flex-column py-5"
+        style={{ backgroundColor: "#FFE1E1" }}
+      >
+        <img src={require("../../Images/avatarProfile.png")} />
+        <h1 className="poppins-medium my-3">Profile</h1>
+        <button className="btns">Update Profile</button>
+      </div>
+      <div className="m-3" />
+      <div className="container">
+        <h3 className="fontColor">Personal Info</h3>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="First Name"
+              label="First Name"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Middle Name"
+              label="Middle Name"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Last Name"
+              label="Last Name"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Father Name"
+              label="Father Name"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Age"
+              label="Age"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <SelectInput
+              label="Select Gender"
+              options={options}
+              backgroundColor="#FFE1E1"
+              labelColor="#333"
+              onChange={handleSelectChange}
+              name="exampleSelect"
+              // required={true}
+              showError={selectedValue === ""}
+              value={selectedValue}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Marital Status"
+              label="Marital Status"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Religion"
+              label="Religion"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Religious Sect"
+              label="Religious Sect"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="m-3" />
+      <div className="container">
+        <h3 className="fontColor">Address</h3>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Country"
+              label="Country"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Provience"
+              label="Provience"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="City"
+              label="City"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Street Address"
+              label="Street Address"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Zip / Code"
+              label="Zip / Code"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+       
+        </div>
+       
+      </div>
+      <div className="m-3" />
+      <div className="container">
+        <h3 className="fontColor">Partner Requirments</h3>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Looking For"
+              label="Looking For"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Martial Status"
+              label="Martial Status"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Age (From)"
+              label="Age (From)"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Age (To)"
+              label="Age (To)"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Religion"
+              label="Religion"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Religious Sect"
+              label="Religious Sect"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+       
+        </div>
+        <div className="row">
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Family Members"
+              label="Family Members"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="Height"
+              label="Height"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+          <div className="col-4">
+            <TextInput2
+              placeHolder="County/Province"
+              label="County/Province"
+              labelColor={"#717171"}
+              backgroundColor={"#FFE1E1"}
+            />
+          </div>
+       
+        </div>
+       
+      </div>
+      <div className="p-4" />
+      <div className="d-flex align-items-center justify-content-center">
+      <button className="btns">Save</button>
+      </div>
+      <div className="p-4" />
+      <Footer/>
     </div>
   );
 };

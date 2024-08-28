@@ -6,8 +6,9 @@
 }
 
 :root {
-  --buttonColor: #C5AC76;
+  --buttonColor: #A14049;
   --labelColor: #f6f6f6;
+  --primary: #A14049;
 }
 
 html {
@@ -125,6 +126,10 @@ header button{
   font-family: "Montserrat", sans-serif;
   background-color: var(--buttonColor);
   color: #f6f6f6;
+}
+
+.navbar-nav .nav-item.nav-link.active {
+  color: var(--primary);
 }
 
 

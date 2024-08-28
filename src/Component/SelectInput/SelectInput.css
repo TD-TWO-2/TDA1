@@ -1,0 +1,35 @@
+/* .TextInput {
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: #DFDFDF;
+  color: black;
+  height: 35px;
+}
+
+.TextInputLabel {
+  margin-top: 10px;
+  font-size: 12px;
+  color: black;
+} */
+
+.SelectInput {
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+    color: black;
+    height: 35px;
+  }
+  
+  .SelectAreaLabel {
+    margin-top: 10px;
+    font-size: 12px;
+    color: 'black';
+  }
+  input:focus {
+    outline:none !important;
+  }
+  

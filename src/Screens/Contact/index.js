@@ -6,12 +6,11 @@ import NavBar from "../../Component/NavBar";
 const Contact = () => {
   return (
     <div className="container-fluied">
-    <NavBar/>
       <div className="row">
         <div className="col-8">
           <div
             className="d-flex justify-content-center align-items-center flex-column"
-            // style={{ height: "100vh" ,width:'100%'}}
+            style={{ height: "100vh" ,width:'100%'}}
           >
             {/* <img src={require("../../Images/azwgold.png")} /> */}
             <div className="m-5 p-3" />
